@@ -18,7 +18,7 @@ python3 -OO -m PyInstaller $APP.spec --noconfirm
 
 echo "Preparing app..."
 
-cp --parents -r ../lib ./dist/$APP/lib
+cp --parents -r ../app ./dist/$APP/app
 cp ../es.pabloavi.error-rounder-gtk.png ./dist/$APP
 cp ./error-rounder-gtk.desktop ./dist/$APP
 cp ../LICENSE ./dist/$APP

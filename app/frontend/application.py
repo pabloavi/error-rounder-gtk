@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 
-from lib.prepare_excel import prepare_excel
-from lib.window import Window
+from app.backend.prepare_excel import prepare_excel
+from app.frontend.window import Window
 from gi import require_versions
 
 require_versions({"Gtk": "4.0", "Adw": "1"})
 from gi.repository import Gtk, Adw, Gdk
 
 import pyclip
-from lib.magnitudes import Magnitudes
-from lib.ui import ui, css
+from app.backend.magnitudes import Magnitudes
+from app.frontend.ui import ui, css
 
 entries = []
 

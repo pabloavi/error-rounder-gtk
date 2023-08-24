@@ -7,7 +7,7 @@ a = Analysis(
 	pathex=[],
 	binaries=[],
 	datas=[
-		('../lib', 'lib'),
+		('../app', 'app'),
 		('../es.pabloavi.error-rounder-gtk.png', '.'),
 		('../LICENSE', '.'),
 		('../VERSION', '.'),

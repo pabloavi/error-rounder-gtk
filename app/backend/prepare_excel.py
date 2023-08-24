@@ -1,4 +1,4 @@
-from lib.float_to_str import float_to_str
+from app.backend.float_to_str import float_to_str
 
 
 # - Replace commas with dots

@@ -1,5 +1,4 @@
 from math import floor, log10, fabs
-from lib.float_to_str import float_to_str
 
 
 # Given an integer, return the number of zeros at the end of the number
