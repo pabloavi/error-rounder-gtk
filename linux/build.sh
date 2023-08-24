@@ -1,6 +1,6 @@
 #!/bin/sh
 
-APP=hello-world-gtk
+APP=error-rounder-gtk
 
 if [ ! -d ../venv ]; then
 	echo "Setting up virtual environment..."
@@ -18,6 +18,13 @@ python3 -OO -m PyInstaller $APP.spec --noconfirm
 
 echo "Preparing app..."
 
+cp --parents -r ../lib ./dist/$APP/lib
+cp ../es.pabloavi.error-rounder-gtk.png ./dist/$APP
+cp ./error-rounder-gtk.desktop ./dist/$APP
+cp ../LICENSE ./dist/$APP
+cp ../README.md ./dist/$APP
+cp ../VERSION ./dist/$APP
+
 version=$(cat ../VERSION)
 mv dist/$APP/$APP dist/$APP/AppRun
 sed -i "s/X-AppImage-Version=VERSION/X-AppImage-Version="$version"/g" dist/$APP/$APP.desktop
@@ -29,7 +36,7 @@ echo "Running appimagetool..."
 ARCH=$(uname -m) ./appimagetool-$(uname -m).AppImage dist/$APP
 rm appimagetool-$(uname -m).AppImage
 mv *.AppImage $APP-$version-$(uname -m).AppImage
-echo $(sha256sum $APP-$version-$(uname -m).AppImage) > $APP-$version-$(uname -m).AppImage.sha256
+echo $(sha256sum $APP-$version-$(uname -m).AppImage) >$APP-$version-$(uname -m).AppImage.sha256
 
 echo "Cleaning up..."
 

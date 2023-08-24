@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Error rounder
+Exec=error-rounder-gtk
+Terminal=false
+Type=Application
+Icon=es.pabloavi.error-rounder-gtk
+StartupWMClass=errorroundergtk
+X-AppImage-Version=1.0
+Comment=Round errors in a file
+MimeType=x-scheme-handler/errorroundergtk;
+Categories=GNOME;GTK;Utility;

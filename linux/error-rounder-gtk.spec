@@ -3,15 +3,15 @@
 block_cipher = None
 
 a = Analysis(
-	['../hello-world-gtk'],
+	['../error-rounder-gtk'],
 	pathex=[],
 	binaries=[],
 	datas=[
 		('../lib', 'lib'),
-		('../org.example.HelloWorldGTK.svg', '.'),
+		('../es.pabloavi.error-rounder-gtk.png', '.'),
 		('../LICENSE', '.'),
 		('../VERSION', '.'),
-		('hello-world-gtk.desktop', '.')
+		('error-rounder-gtk.desktop', '.')
 	],
 	hooksconfig={
 		'gi': {
@@ -43,7 +43,7 @@ exe = EXE(
 	a.scripts,
 	[],
 	exclude_binaries=True,
-	name='hello-world-gtk',
+	name='error-rounder-gtk',
 	debug=False,
 	bootloader_ignore_signals=False,
 	strip=False,
@@ -59,5 +59,5 @@ coll = COLLECT(
 	strip=False,
 	upx=True,
 	upx_exclude=[],
-	name='hello-world-gtk'
+	name='error-rounder-gtk'
 )
