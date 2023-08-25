@@ -119,13 +119,8 @@ class Magnitudes(list):
         string = ""
         match format[0]:
             case "latex":
-                # first element first magnitude  & first element second magnitude  & first element third magnitude...  \\
-                # second element first magnitude & second element second magnitude & second element third magnitude... \\
-                # ...
-                # no & after last element
                 # TODO: print needed spaces to align columns
                 # create sizes list with the size of each rounded string
-                sizes = []
                 for i in range(len(self[0])):
                     for j in range(len(self)):
                         string += self[j][i].rounded_str
