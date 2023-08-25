@@ -1,3 +1,4 @@
+# credits to https://stackoverflow.com/questions/38847690/convert-float-to-string-in-positional-format-without-scientific-notation-and-fa/38983595#38983595
 def float_to_str(f):
     float_string = repr(f)
     if "e" in float_string:  # detect scientific notation
