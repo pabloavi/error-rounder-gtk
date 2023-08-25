@@ -7,3 +7,4 @@ A multi-platform python script built using GTK that rounds experimental values a
 - [ ] Add multi-language support (currently only supports Spanish)
 - [ ] Improve error handling
 - [ ] Add simple notification/inside-app-log support
+- [ ] Add system theme support (GTK) and a sensible default theme
